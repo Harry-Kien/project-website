@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng giá dịch vụ - Homeseeker</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0d6efd;
+            --secondary-color: #f8f9fa;
+        }
+        
+        .header {
+            background-color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .banner {
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('blurred_image.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+        
+        .pricing-card {
+            transition: transform 0.3s;
+            height: 100%;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .pricing-header {
+            color: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 5px 5px 0 0;
+        }
+        
+        .price {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .feature-check {
+            color: green;
+        }
+        
+        .feature-times {
+            color: red;
+        }
+        
+        .testimonial {
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            background-color: var(--secondary-color);
+        }
+        
+        .testimonial img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .highlight {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .service-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        footer {
+            background-color: #f8f9fa;
+            padding: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div id="header-container"></div>
+
+<script>
+  fetch('Header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header-container').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading header:', error));
+</script>
+
+    <!-- Banner -->
+    <section class="banner">
+        <div class="container">
+            <h1>Bảng giá dịch vụ</h1>
+            <p>Chọn gói dịch vụ phù hợp</p>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Bảng giá dịch vụ</h2>
+            <p class="text-center text-muted mb-5">Áp dụng từ 01/01/2024</p>
+            
+            <div class="row">
+                <!-- Basic Plan -->
+                <div class="col-lg mb-4">
+                    <div class="card pricing-card shadow-sm">
+                        <div class="pricing-header bg-danger">
+                            <h5 class="m-0">Gói cơ bản</h5>
+                        </div>
+                        <div class="card-body text-center">
+                            <div class="price mb-3">100.000đ</div>
+                            <p class="text-muted">7 ngày</p>
+                            <hr>
+                            <div class="price mb-3">350.000đ</div>
+                            <p class="text-muted">30 ngày</p>
+                            <hr>
+                            <div class="price mb-3">1.000.000đ</div>
+                            <p class="text-muted">90 ngày</p>
+                            <hr>
+                            <p class="text-center text-uppercase"><small class="text-danger fw-bold">Miễn phí 5% phí đặt cọc</small></p>
+                            <ul class="list-unstyled text-start">
+                                <li class="mb-2"><i class="fas fa-check-circle feature-check"></i> Hỗ trợ 24/7</li>
+                                <li class="mb-2"><i class="fas fa-check-circle feature-check"></i> Đăng 10 tin</li>
+                                <li class="mb-2"><i class="fas fa-check-circle feature-check"></i> Tự động đăng tin</li>
+                                <li class="mb-2"><i class="fas fa-times-circle feature-times"></i> Nổi bật tìm kiếm</li>
+                            </ul>
+                            <button class="btn btn-danger mt-3 w-100">Mua ngay</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Standard Plan -->
+                <div class="col-lg mb-4">
+                    <div class="card pricing-card shadow-sm">
+                        <div class="pricing-header bg-warning">
+                            <h5 class="m-0">Gói tiêu chuẩn</h5>
+                        </div>
+                        <div class="card-body text-center">
+                            <div class="price mb-3">200.000đ</div>
+                            <p class="text-muted">7 ngày</p>
+                            <hr>
+                            <div class="price mb-3">700.000đ</div>
+                            <p class="text-muted">30 ngày</p>
+                            <hr>
+                            <div class="price mb-3">1.800.000đ</div>
+                            <p class="text-muted">90 ngày</p>
+                            <hr>
+                            <p class="text-center text-uppercase"><small class="text-warning fw-bold">Miễn phí 10% phí đặt cọc</small></p>
+                            <ul class="list-unstyled text-start">
+                                <li class="mb-2"><i class="fas fa-check-circle feature-check"></i> Hỗ trợ 24/7</li>
+                                <li class="mb-2"><i class="fas fa-check-circle feature-check"></i> Đăng 25 tin</li>
+                                <li class="mb-2"><i class="fas fa-check-circle feature-check"></i> Tự động đăng tin</li>
+                                <li class="mb-2"><i class="fas fa-check-circle feature-check"></i> Nổi bật tìm kiếm</li>
+                            </ul>
+                            <button class="btn btn-warning mt-3 w-100">Mua ngay</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Premium Plan -->
+                <div class="col-lg mb-4">
+                    <div class="card pricing-card shadow-sm">
+                        <div class="pricing-header bg-success">
+                            <h5 class="m-0">Gói cao cấp</h5>
+                        </div>
+                        <div class="card-body text-center">
+                            <div class="price mb-3">300.000đ</div>
+                            <p class="text-muted">7 ngày</p>
+                            <hr>
+                            <div class="price mb-3">1.000.000đ</div>
+                            <p class="text-muted">30 ngày</p>
+                            <hr>
+                            <div class="price mb-3">2.500.000đ</div>
+                            <p class="text-muted">90 ngày</p>
+                            <hr>
+                            <p class="text-center text-uppercase"><small class="text-success fw-bold">Miễn phí 15% phí đặt cọc</small></p>
+                            <ul class="list-unstyled text-start">
+                                <li class="mb-2"><i class="fas fa-check-circle feature-check"></i> Hỗ trợ 24/7</li>
+                                <li class="mb-2"><i class="fas fa-check-circle feature-check"></i> Đăng không giới hạn</li>
+                                <li class="mb-2"><i class="fas fa-check-circle feature-check"></i> Tự động đăng tin</li>
+                                <li class="mb-2"><i class="fas fa-check-circle feature-check"></i> Nổi bật tìm kiếm</li>
+                            </ul>
+                            <button class="btn btn-success mt-3 w-100">Mua ngay</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pro Plan -->
+                <div class="col-lg mb-4">
+                    <div class="card pricing-card shadow-sm">
+                        <div class="pricing-header bg-primary">
+                            <h5 class="m-0">Gói chuyên nghiệp</h5>
+                        </div>
+                        <div class="card-body text-center">
+                            <div class="price mb-3">450.000đ</div>
+                            <p class="text-muted">7 ngày</p>
+                            <hr>
+                            <div class="price mb-3">1.500.000đ</div>
+                            <p class="text-muted">30 ngày</p>
+                            <hr>
+                            <div class="price mb-3">4.000.000đ</div>
+                            <p class="text-muted">90 ngày</p>
+                            <hr>
+                            <p class="text-center text-uppercase"><small class="text-primary fw-bold">Miễn phí 20% phí đặt cọc</small></p>
+                            <ul class="list-unstyled text-start">
+                                <li class="mb-2"><i class="fas fa-check-circle feature-check"></i> Hỗ trợ 24/7</li>
+                                <li class="mb-2"><i class="fas fa-check-circle feature-check"></i> Đăng không giới hạn</li>
+                                <li class="mb-2"><i class="fas fa-check-circle feature-check"></i> Tự động đăng tin</li>
+                                <li class="mb-2"><i class="fas fa-check-circle feature-check"></i> Nổi bật tìm kiếm</li>
+                            </ul>
+                            <button class="btn btn-primary mt-3 w-100">Mua ngay</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Enterprise Plan -->
+                <div class="col-lg mb-4">
+                    <div class="card pricing-card shadow-sm">
+                        <div class="pricing-header bg-dark">
+                            <h5 class="m-0">Doanh nghiệp</h5>
+                        </div>
+                        <div class="card-body text-center">
+                            <div class="price mb-3">Liên hệ</div>
+                            <p class="text-muted">Tùy chỉnh</p>
+                            <hr>
+                            <div class="price mb-3">Liên hệ</div>
+                            <p class="text-muted">Tùy chỉnh</p>
+                            <hr>
+                            <div class="price mb-3">Liên hệ</div>
+                            <p class="text-muted">Tùy chỉnh</p>
+                            <hr>
+                            <p class="text-center text-uppercase"><small class="text-dark fw-bold">Miễn phí 30% phí đặt cọc</small></p>
+                            <ul class="list-unstyled text-start">
+                                <li class="mb-2"><i class="fas fa-check-circle feature-check"></i> Hỗ trợ 24/7</li>
+                                <li class="mb-2"><i class="fas fa-check-circle feature-check"></i> Đăng không giới hạn</li>
+                                <li class="mb-2"><i class="fas fa-check-circle feature-check"></i> Tự động đăng tin</li>
+                                <li class="mb-2"><i class="fas fa-check-circle feature-check"></i> Nổi bật tìm kiếm</li>
+                            </ul>
+                            <button class="btn btn-dark mt-3 w-100">Liên hệ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Khách hàng nói về chúng tôi</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial shadow-sm p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="/api/placeholder/60/60" alt="User" class="me-3">
+                            <div>
+                                <h5 class="mb-0">Nguyễn Văn A</h5>
+                                <small class="text-muted">Chủ nhà</small>
+                            </div>
+                        </div>
+                        <p>Tôi rất hài lòng với dịch vụ của Homeseeker. Đăng tin nhanh chóng và có nhiều người quan tâm. Đã thuê được căn hộ của mình chỉ sau 2 ngày đăng tin. Nhân viên hỗ trợ rất nhiệt tình.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial shadow-sm p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="/api/placeholder/60/60" alt="User" class="me-3">
+                            <div>
+                                <h5 class="mb-0">Trần Thị B</h5>
+                                <small class="text-muted">Người thuê</small>
+                            </div>
+                        </div>
+                        <p>Việc tìm nhà trở nên rất dễ dàng với Homeseeker. Tôi đã tìm được căn hộ ưng ý chỉ sau 1 tuần tìm kiếm. Giao diện trang web rất thân thiện và dễ sử dụng.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial shadow-sm p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="/api/placeholder/60/60" alt="User" class="me-3">
+                            <div>
+                                <h5 class="mb-0">Lê Văn C</h5>
+                                <small class="text-muted">Môi giới</small>
+                            </div>
+                        </div>
+                        <p>Là một môi giới bất động sản, tôi rất hài lòng với các gói dịch vụ của Homeseeker. Đặc biệt là gói cao cấp đã giúp tôi tiếp cận nhiều khách hàng hơn và tăng doanh số bán hàng.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <div class="service-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h4>Uy tín cao</h4>
+                    <p>Đội ngũ nhân viên chuyên nghiệp</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Bảo hành đảm bảo</h4>
+                    <p>Cam kết chất lượng</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h4>Hỗ trợ 24/7</h4>
+                    <p>Luôn sẵn sàng giúp đỡ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+    <!-- Bootstrap JS -->
+    <script>
+        fetch('Footer.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('footer-container').innerHTML = data;
+          });
+      </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
